@@ -16,10 +16,11 @@ export function draw() {
 }
 
 export function updateHighScore() {
-  const storedHighScore = Number(localStorage.getItem(HIGH_SCORE_KEY))
+  highScore = Number(localStorage.getItem(HIGH_SCORE_KEY))
 
-  if(score > storedHighScore) {
+  if(score > highScore) {
     localStorage.setItem(HIGH_SCORE_KEY, score)
+    highScore = score;
   }
   highScoreDisplay.textContent = `HighScore: ${highScore}`;
 }

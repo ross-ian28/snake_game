@@ -31,8 +31,8 @@ window.requestAnimationFrame(main)
 function update() {
 	updateSnake();
 	updateFood();
-	updateHighScore();
 	updateScore();
+	updateHighScore()
 	checkDeath();
 } 
 
